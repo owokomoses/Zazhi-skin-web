@@ -101,5 +101,16 @@
         items: 1,
     });
 
+    // Highlight active navigation link
+    $(document).ready(function() {
+        var currentPath = window.location.pathname.split('/').pop();
+        $('.navbar-nav .nav-link').each(function() {
+            var linkHref = $(this).attr('href');
+            if (linkHref === currentPath) {
+                $(this).addClass('active');
+            }
+        });
+    });
+
 })(jQuery);
 
