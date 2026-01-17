@@ -1,0 +1,2 @@
+- [x] Replace single image in hero section with Owl Carousel structure containing shampoo.png, shampoo-1.png, shampoo-2.png
+- [x] Add hero carousel initialization in main.js with autoplay, loop, and dots
