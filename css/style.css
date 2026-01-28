@@ -79,7 +79,6 @@ img.animated.pulse {
     z-index: 1030;
 }
 
-
 .navbar {
     padding: 11px 0 !important;
     height: 85px;
@@ -135,6 +134,70 @@ img.animated.pulse {
     background: rgba(0,0,0,0.4); /* dark overlay for contrast */
     z-index: -1;
 }
+
+/* ==============================
+    NAV SECTION – GLASS BUTTON
+   ============================== */
+.nav-section .btn {
+    position: relative;
+    padding: 10px 28px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    background: rgba(0, 0, 0, 0.35); /* glass black */
+    color: goldenrod;
+
+    border: 1px solid rgba(218, 165, 32, 0.45);
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+/* Subtle glass reflection */
+.nav-section .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.35),
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.25)
+    );
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* Glow effect */
+.nav-section .btn {
+    box-shadow:
+        0 0 12px rgba(218,165,32,0.35),
+        inset 0 0 10px rgba(255,255,255,0.15);
+}
+
+/* Hover */
+.nav-section .btn:hover {
+    transform: translateY(-2px);
+    background: rgba(218, 165, 32, 0.25);
+    color: black;
+
+    box-shadow:
+        0 0 22px rgba(218,165,32,0.6),
+        0 0 45px rgba(218,165,32,0.3);
+}
+
+/* Active / focus */
+.nav-section .btn:focus {
+    outline: none;
+    box-shadow:
+        0 0 0 3px rgba(218,165,32,0.35);
+}
+
+
 
 
 /* Tablets & down (768px and below) */
@@ -249,6 +312,87 @@ img.animated.pulse {
     display: flex;
     align-items: center;
 }
+
+/* ==============================
+HERO SECTION – GLASS BUTTONS
+   ============================== */
+.hero-section .btn {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 14px 34px;
+    border-radius: 14px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+/* Primary Glass Button – Shop Now */
+.hero-section .btn.btn-dark {
+    background: rgba(218, 165, 32, 0.18); /* goldenrod glass */
+    color: goldenrod;
+    border: 1px solid rgba(218, 165, 32, 0.45);
+
+    /* Glow effect */
+    box-shadow:
+        0 0 20px rgba(218, 165, 32, 0.4),
+        0 0 40px rgba(218, 165, 32, 0.25),
+        inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Light reflection layer */
+.hero-section .btn.btn-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.35),
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.25)
+    );
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Hover – Shop Now */
+.hero-section .btn.btn-dark:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(218, 165, 32, 0.28);
+    box-shadow:
+        0 0 30px rgba(218, 165, 32, 0.6),
+        0 0 60px rgba(218, 165, 32, 0.35);
+}
+
+/* Secondary Glass Button – Contact Us */
+.hero-section .btn.btn-outline-dark {
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.35);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.2),
+        inset 0 0 10px rgba(255,255,255,0.15);
+}
+
+/* Hover – Contact Us */
+.hero-section .btn.btn-outline-dark:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.15);
+    color: black;
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.4);
+}
+
+/* Focus */
+.hero-section .btn:focus {
+    outline: none;
+    box-shadow:
+        0 0 0 4px rgba(218,165,32,0.35);
+}
+
 
 
 
