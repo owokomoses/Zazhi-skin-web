@@ -17,13 +17,15 @@
 
 
     // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.sticky-top').addClass('bg-secondary shadow-sm').css('top', '0px');
-        } else {
-            $('.sticky-top').removeClass('bg-secondary shadow-sm').css('top', '-150px');
-        }
-    });
+    // Sticky Navbar with image
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+        $('.nav-section').addClass('bg-sticky').css('top', '0px');
+    } else {
+        $('.nav-section').removeClass('bg-sticky').css('top', '-150px');
+    }
+});
+
     
     
     // Back to top button

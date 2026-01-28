@@ -72,10 +72,13 @@ img.animated.pulse {
 
 
 /*** Navbar ***/
-.sticky-top {
-    top: -150px;
-    transition: .5s;
+/* Default - top of page (transparent) */
+.nav-section {
+    background: transparent;
+    transition: background 0.5s ease;
+    z-index: 1030;
 }
+
 
 .navbar {
     padding: 11px 0 !important;
@@ -115,6 +118,24 @@ img.animated.pulse {
 .logo-mobile {
     display: none;
 }
+
+/* Sticky background with image */
+.nav-section.bg-sticky {
+    background-image: url('../img/bg2.jpg'); /* replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
+
+.nav-section.bg-sticky::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* dark overlay for contrast */
+    z-index: -1;
+}
+
 
 /* Tablets & down (768px and below) */
 @media (max-width: 767.98px) {
