@@ -314,7 +314,7 @@ img.animated.pulse {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background-color: transparent;
     border: 3px solid rgba(255, 255, 255, .2);
     border-radius: 30px;
     transition: .5s;
@@ -322,6 +322,7 @@ img.animated.pulse {
 
 .testimonial-carousel .owl-dot.active {
     background: var(--bs-dark);
+    background-color:goldenrod;
 }
 
 
@@ -384,7 +385,8 @@ img.animated.pulse {
 }
 
 .newsletter .form-control {
-    background: rgba(255, 255, 255, .3);
+    background: transparent;
+    border-color: goldenrod;
 }
 
 
