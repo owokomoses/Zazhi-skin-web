@@ -107,16 +107,28 @@ img.animated.pulse {
     margin-left: 8px;
 }
 
-@media (max-width: 991.98px) {
+/* Default (desktop) */
+.navbar-logo {
+    max-height: 120px;
+}
+
+/* Tablets & down (768px and below) */
+@media (max-width: 767.98px) {
     .navbar .navbar-nav {
         padding: 0 15px;
         background: var(--bs-primary);
+        flex-wrap: wrap;
     }
 
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
     }
+
+    .navbar-logo {
+        max-height: 60px;   /* reduce logo size */
+    }
+    
 }
 
 @media (min-width: 992px) {
