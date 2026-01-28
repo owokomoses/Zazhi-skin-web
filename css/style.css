@@ -195,6 +195,76 @@ img.animated.pulse {
     color: var(--bs-light);
 }
 
+/* HERO IMAGE WRAPPER */
+.hero-carousel {
+    display: flex;
+    justify-content: flex-end; /* push images to the right */
+    align-items: center;
+}
+
+/* HERO IMAGES – unified sizing */
+.hero-carousel img {
+    max-height: 420px !important;
+    width: auto !important;
+    margin-left: 0 !important;   /* override inline margins */
+    margin-right: 0;
+    object-fit: contain;
+}
+
+/* Center images inside carousel item */
+.hero-carousel .owl-item > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-carousel img {
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.25));
+}
+
+/* HERO SECTION FULL HEIGHT */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Desktop polish */
+@media (min-width: 992px) {
+    .hero-carousel {
+        padding-left: 40px; /* subtle spacing from text */
+    }
+}
+
+/* Tablet & mobile fixes */
+@media (max-width: 991.98px) {
+    .hero-carousel {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .hero-carousel img {
+        max-height: 300px !important;
+    }
+}
+
+/* Small screens */
+@media (max-width: 575.98px) {
+    .hero-carousel img {
+        max-height: 240px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        min-height: 100svh; /* modern mobile safe viewport */
+    }
+}
+
+
+
 
 
 /*** Feature ***/
