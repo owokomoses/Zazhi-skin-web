@@ -140,10 +140,11 @@ img.animated.pulse {
    ============================== */
 .nav-section .btn {
     position: relative;
-    padding: 10px 28px;
+    padding: 8px 26px;
     font-weight: 600;
     letter-spacing: 0.4px;
     border-radius: 12px;
+    
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -620,7 +621,7 @@ HERO SECTION – GLASS BUTTONS
 }
 
 /* ==============================
-   DEAL SECTION – WHITE SAFE GLASS BUTTON
+    DEAL SECTION – WHITE SAFE GLASS BUTTON
    ============================== */
 .deal-section .btn {
     position: relative;
@@ -906,7 +907,7 @@ HERO SECTION – GLASS BUTTONS
 }
 
 /* ==============================
-   PRODUCT SECTION – GLASS BUTTON
+    PRODUCT SECTION – GLASS BUTTON
    ============================== */
 .product-section .btn {
     position: relative;
@@ -1103,6 +1104,99 @@ HERO SECTION – GLASS BUTTONS
         inset 0 0 10px rgba(255,255,255,0.25);
 }
 
+/* ==============================
+    BLOG SECTION
+   ============================== */
+.blog-section .blog-item {
+    border-radius: 18px;
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+/* Image sizing & alignment */
+.blog-section .blog-item img {
+    width: 100%;
+    height: 230px;              /* consistent height */
+    object-fit: cover;          /* crop without distortion */
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+/* Card hover */
+.blog-section .blog-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================
+    BLOG BUTTON – GLASS STYLE
+   ============================== */
+.blog-section .btn {
+    position: relative;
+    padding: 10px 28px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 14px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    background: rgba(255, 255, 255, 0.65);
+    color: goldenrod;
+
+    border: 1px solid rgba(218, 165, 32, 0.85);
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+/* Glass shine */
+.blog-section .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.55),
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0.35)
+    );
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Soft glow */
+.blog-section .btn {
+    box-shadow:
+        0 6px 15px rgba(0,0,0,0.12),
+        0 0 20px rgba(218,165,32,0.35);
+}
+
+/* Hover */
+.blog-section .btn:hover {
+    background: rgba(218,165,32,0.95);
+    color: #000;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 28px rgba(218,165,32,0.75),
+        0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Active */
+.blog-section .btn:active {
+    transform: scale(0.96);
+}
+
+/* Focus */
+.blog-section .btn:focus {
+    outline: none;
+    box-shadow:
+        0 0 0 3px rgba(218,165,32,0.4),
+        0 0 25px rgba(218,165,32,0.6);
+}
+
+
 /* Glass shine */
 .testimonial .owl-dot::before {
     content: "";
@@ -1201,6 +1295,102 @@ HERO SECTION – GLASS BUTTONS
     background: transparent;
     border-color: goldenrod;
 }
+
+/* ==============================
+    NEWSLETTER SECTION
+   ============================== */
+.newsletter {
+    position: relative;
+}
+
+/* ==============================
+    INPUT FIELD – GLASS STYLE
+   ============================== */
+.newsletter .form-control {
+    height: 56px;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(218, 165, 32, 0.8);
+    color: #000;
+    font-weight: 500;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(218, 165, 32, 0.35);
+
+    transition: all 0.35s ease;
+}
+
+/* Placeholder */
+.newsletter .form-control::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* Focus state */
+.newsletter .form-control:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 0 0 3px rgba(218, 165, 32, 0.4),
+        0 0 30px rgba(218, 165, 32, 0.6);
+}
+
+/* ==============================
+    ICON BUTTON – GLASS STYLE
+   ============================== */
+.newsletter .btn {
+    height: 35px;
+    width: 35px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(218, 165, 32, 0.85);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(218, 165, 32, 0.4);
+
+    transition: all 0.35s ease;
+}
+
+/* Icon color */
+.newsletter .btn i {
+    color: goldenrod;
+    transition: all 0.35s ease;
+}
+
+/* Hover */
+.newsletter .btn:hover {
+    background: rgba(218, 165, 32, 0.95);
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 30px rgba(218, 165, 32, 0.8),
+        0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter .btn:hover i {
+    color: #000;
+}
+
+/* Active */
+.newsletter .btn:active {
+    transform: scale(0.95);
+}
+
 
 
 /*** Footer ***/
