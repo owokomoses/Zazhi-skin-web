@@ -59,6 +59,7 @@ img.animated.pulse {
 .btn {
     font-weight: 500;
     transition: .5s;
+    
 }
 
 .btn.btn-primary {
@@ -224,6 +225,62 @@ img.animated.pulse {
     box-shadow:
         0 0 0 3px rgba(218,165,32,0.35);
 }
+
+/* =========================
+   NAV DROPDOWN – nav-section
+   ========================= */
+
+.nav-section .dropdown-menu {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(218, 165, 32, 0.35); /* goldenrod */
+    border-radius: 12px;
+    padding: 0.5rem 0;
+    margin-top: 0.75rem;
+    min-width: 220px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+/* Dropdown items */
+.nav-section .dropdown-menu .dropdown-item {
+    color: #000;
+    padding: 0.65rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+/* Hover effect (matches buttons) */
+.nav-section .dropdown-menu .dropdown-item:hover {
+    background-color: goldenrod;
+    color: #fff;
+    transform: translateX(6px);
+}
+
+/* Active dropdown item */
+.nav-section .dropdown-menu .dropdown-item.active {
+    background-color: goldenrod;
+    color: #fff;
+}
+
+/* Dropdown toggle arrow smooth animation */
+.nav-section .dropdown-toggle::after {
+    transition: transform 0.3s ease;
+}
+
+.nav-section .dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Mobile dropdown spacing */
+@media (max-width: 767px) {
+    .nav-section .dropdown-menu {
+        margin-top: 0.5rem;
+        box-shadow: none;
+        border-radius: 10px;
+    }
+}
+
 
 
 
