@@ -1391,6 +1391,125 @@ HERO SECTION – GLASS BUTTONS
     transform: scale(0.95);
 }
 
+/* ==============================
+    CONTACT SECTION
+   ============================== */
+.contact-section {
+    position: relative;
+}
+
+/* ==============================
+    FORM LAYOUT REFINEMENT
+   ============================== */
+.contact-section .row.g-5 {
+    align-items: stretch;
+}
+
+/* ==============================
+    GRADIENT GLASS INPUTS
+   ============================== */
+.contact-section .form-control {
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0.55)
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(218, 165, 32, 0.7);
+    color: #000;
+    font-weight: 500;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(218, 165, 32, 0.25);
+
+    transition: all 0.35s ease;
+}
+
+/* ==============================
+    FLOATING LABELS
+   ============================== */
+.contact-section .form-floating label {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+/* Focus */
+.contact-section .form-control:focus {
+    outline: none;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.65)
+    );
+
+    box-shadow:
+        0 0 0 3px rgba(218, 165, 32, 0.4),
+        0 0 30px rgba(218, 165, 32, 0.6);
+}
+
+/* ==============================
+    TEXTAREA
+   ============================== */
+.contact-section textarea.form-control {
+    border-radius: 18px;
+    resize: none;
+}
+
+/* ==============================
+    SUBMIT BUTTON – MATCH OTHERS
+   ============================== */
+.contact-section .btn-primary {
+    background: linear-gradient(
+        135deg,
+        rgba(218, 165, 32, 0.95),
+        rgba(255, 215, 0, 0.85)
+    );
+    border: none;
+
+    border-radius: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    color: #000;
+
+    box-shadow:
+        0 10px 30px rgba(218, 165, 32, 0.6),
+        0 0 35px rgba(218, 165, 32, 0.5);
+
+    transition: all 0.35s ease;
+}
+
+/* Hover */
+.contact-section .btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 40px rgba(218, 165, 32, 0.85),
+        0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Active */
+.contact-section .btn-primary:active {
+    transform: scale(0.96);
+}
+
+/* ==============================
+    MAP STYLING
+   ============================== */
+.contact-section iframe {
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(218, 165, 32, 0.35);
+}
+
+
 
 
 /*** Footer ***/
