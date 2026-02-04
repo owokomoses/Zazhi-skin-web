@@ -426,6 +426,24 @@ img.animated.pulse {
     margin-top: 10px;
 }
 
+.nav-cart i {
+    font-size: 18px;
+    color: #000;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: goldenrod;
+    color: #000;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+
 
 
 /* Dropdown items */
