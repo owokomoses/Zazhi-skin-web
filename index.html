@@ -74,6 +74,28 @@
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="product.html" class="btn btn-dark py-2 px-4 d-none d-md-inline-block"><i class="fa fa-shopping-bag me-2"></i> Shop Now</a>
+                    <a href="cart.html" class="nav-cart ms-3 position-relative"><i class="fa fa-shopping-cart"></i><span id="cart-count">0</span></a>
+                    <!-- CART MODAL -->
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-glass">
+        <div class="cart-header">
+            <h4>Your Cart</h4>
+            <button class="close-cart">&times;</button>
+        </div>
+
+        <div id="cart-modal-items" class="cart-items"></div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                Total: $<span id="cart-modal-total">0.00</span>
+            </div>
+            <div class="cart-actions">
+                <a href="checkout.html" class="btn btn-dark">Checkout</a>
+            </div>
+        </div>
+    </div>
+</div>
+
                 </div>
             </nav>
         </div>
@@ -378,7 +400,13 @@
                         </div>
                         <a href="" class="h6 d-inline-block mb-2">Hair Shining Shampoo</a>
                         <h5 class=" mb-3" style="color: goldenrod;">$99.99</h5>
-                        <a href="" class="btn btn-outline-dark px-3" ><i class="fa fa-shopping-cart me-2"></i>Add To Cart</a>
+                        <a href="#"  class="btn btn-outline-dark px-3 add-to-cart"data-id="1"
+    data-name="Hair Shining Shampoo"
+    data-price="99.99"
+    data-image="img/body_lotion.png">
+    <i class="fa fa-shopping-cart me-2"></i>Add To Cart
+</a>
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
@@ -394,7 +422,15 @@
                         </div>
                         <a href="" class="h6 d-inline-block mb-2">Anti-dandruff Shampoo</a>
                         <h5 class=" mb-3" style="color: goldenrod;">$99.99</h5>
-                        <a href="" class="btn btn-outline-dark px-3" ><i class="fa fa-shopping-cart me-2"></i>Add To Cart</a>
+                        <a href="#"
+   class="btn btn-outline-dark px-3 add-to-cart"
+   data-id="2"
+   data-name="Anti-dandruff Shampoo"
+   data-price="99.99"
+   data-image="img/body_oil.png">
+   <i class="fa fa-shopping-cart me-2"></i>Add To Cart
+</a>
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
@@ -410,7 +446,15 @@
                         </div>
                         <a href="" class="h6 d-inline-block mb-2">Anti Hair Fall Shampoo</a>
                         <h5 class=" mb-3" style="color: goldenrod;">$99.99</h5>
-                        <a href="" class="btn btn-outline-dark px-3" ><i class="fa fa-shopping-cart me-2"></i>Add To Cart</a>
+                        <a href="#"
+   class="btn btn-outline-dark px-3 add-to-cart"
+   data-id="3"
+   data-name="Anti Hair Fall Shampoo"
+   data-price="99.99"
+   data-image="img/body_oil.png">
+   <i class="fa fa-shopping-cart me-2"></i>Add To Cart
+</a>
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
@@ -426,7 +470,15 @@
                         </div>
                         <a href="" class="h6 d-inline-block mb-2">Hair Growing Shampoo</a>
                         <h5 class=" mb-3" style="color: goldenrod;">$99.99</h5>
-                        <a href="" class="btn btn-outline-dark px-3" ><i class="fa fa-shopping-cart me-2"></i>Add To Cart</a>
+                        <a href="#"
+   class="btn btn-outline-dark px-3 add-to-cart"
+   data-id="4"
+   data-name="Hair Growing Shampoo"
+   data-price="99.99"
+   data-image="img/body_lotion.png">
+   <i class="fa fa-shopping-cart me-2"></i>Add To Cart
+</a>
+
                     </div>
                 </div>
             </div>
@@ -641,6 +693,8 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/cart.js"></script>
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
