@@ -179,3 +179,17 @@ function saveCart() {
     renderCartModal();
 }
 
+function openCheckout() {
+    document.getElementById("cart-modal").style.display = "none";
+    document.getElementById("checkout-modal").style.display = "flex";
+
+    document.getElementById("checkout-total").innerText =
+        cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+}
+
+function closeCheckout() {
+    document.getElementById("checkout-modal").style.display = "none";
+}
+
+
+

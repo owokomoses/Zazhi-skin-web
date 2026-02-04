@@ -32,3 +32,5 @@ document.getElementById("checkout-form").addEventListener("submit", function(e) 
     localStorage.removeItem("cart");
     window.location.href = "index.html";
 });
+
+
