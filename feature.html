@@ -45,40 +45,103 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid sticky-top nav-section product-section">
-        <div class="container">
-            <nav class="navbar navbar-expand-md navbar-light p-0">
-                <a href="index.html" class=" navbar-brand">
-                    <img src="img/zazhi_logo2.png" class="navbar-logo logo-desktop img-fluid rounded" alt="Zazhi Logo">
-                    <img src="img/Zazhi_logo2.png" class="navbar-logo logo-mobile img-fluid rounded" alt="Zazhi Logo Mobile">
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link ">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="product.html" class="nav-item nav-link">Products</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu bg-light mt-2">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="how-to-use.html" class="dropdown-item">How To Use</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="blog.html" class="dropdown-item">Blog Articles</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
+<div class="container-fluid sticky-top nav-section product-section">
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light p-0 align-items-center">
+            <!-- Brand -->
+            <a href="index.html" class="navbar-brand">
+                <img src="img/zazhi_logo2.png" class="navbar-logo logo-desktop img-fluid rounded" alt="Zazhi Logo">
+                <img src="img/Zazhi_logo2.png" class="navbar-logo logo-mobile img-fluid rounded" alt="Zazhi Logo Mobile">
+            </a>
+
+            <!-- Mobile Cart Icon (small screens only) -->
+            <a href="#" class="nav-cart d-md-none me-2 position-relative cart-btn">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="cart-badge" id="cart-count-mobile">0</span>
+            </a>
+
+            <!-- Hamburger toggler -->
+            <button type="button" class="navbar-toggler ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto align-items-center">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="product.html" class="nav-item nav-link">Products</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu bg-light mt-2">
+                            <a href="feature.html" class="dropdown-item">Features</a>
+                            <a href="how-to-use.html" class="dropdown-item">How To Use</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="blog.html" class="dropdown-item">Blog Articles</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="product.html" class="btn btn-dark py-2 px-4 d-none d-md-inline-block"><i class="fa fa-shopping-bag me-2"></i> Shop Now</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-            </nav>
+
+                <!-- Desktop Buttons -->
+                <a href="product.html" class="btn btn-dark py-2 px-4 d-none d-md-inline-block ms-3">
+                    <i class="fa fa-shopping-bag me-2"></i> Shop Now
+                </a>
+                <a href="#" class="nav-cart ms-3 d-none d-md-inline-block position-relative cart-btn">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="cart-modal ">
+    <div class="cart-glass">
+        <div class="cart-header">
+            <h4>Your Cart</h4>
+            <button class="close-cart">&times;</button>
+        </div>
+
+        <div id="cart-modal-items" class="cart-items"></div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                Total: $<span id="cart-modal-total">0.00</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-dark w-100 mt-3" onclick="openCheckout()">Proceed to Checkout</button>
+            </div>
         </div>
     </div>
-    <!-- Navbar End -->
+</div>
+
+<!-- Checkout Modal -->
+<div id="checkout-modal" class="cart-modal">
+    <div class="cart-glass">
+        <div class="cart-header">
+            <h4>Checkout</h4>
+            <button class="close-cart" onclick="closeCheckout()">×</button>
+        </div>
+
+        <div class="cart-items">
+            <input class="form-control mb-3" placeholder="Full Name">
+            <input class="form-control mb-3" placeholder="Email Address">
+            <input class="form-control mb-3" placeholder="Phone Number">
+            <textarea class="form-control mb-3" rows="3" placeholder="Delivery Address"></textarea>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                Total: $<span id="checkout-total">0.00</span>
+            </div>
+            <button class="btn btn-dark w-100 mt-3">Confirm Order</button>
+        </div>
+    </div>
+</div>
 
 
     <!-- Hero Start -->
@@ -343,6 +406,8 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
